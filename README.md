@@ -45,10 +45,7 @@ Follow these steps to use the Random Password Generator as a browser extension:
 git clone https://github.com/your-username/random-password-generator.git
 ```
 
-2. **Install Dependencies (if any):**
-If the extension requires any dependencies or build steps, follow the instructions provided in the repository's README file.
-
-3. **Load the Extension in Browser:**
+2. **Load the Extension in Browser:**
 - **For Chrome:**
   1. Open Google Chrome and navigate to `chrome://extensions/`.
   2. Enable "Developer mode" by toggling the switch in the top-right corner.
