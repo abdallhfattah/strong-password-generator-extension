@@ -1,65 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Strong Password</title>
-    <link rel="stylesheet" href="./styles/app.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/app.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="lock-logo-div"> 
-          <img src="./assets/icon-lock.png" alt="icon of a lock">
+      <div class="lock-logo-div">
+        <img src="./assets/icon-lock.png" alt="icon of a lock" />
+      </div>
+
+      <!-- setting container -->
+      <section class="setting-container">
+        <div class="setting">
+          <label for="IncludeDigits">
+            <span>Include digits</span>
+            <span></span>
+          </label>
+          <input type="checkbox" id="IncludeDigits" checked />
         </div>
 
-        <!-- setting container -->
-        <section class="setting-container">
-          <div class="setting">
-            <label for="digits">
-              <span>Include digits</span>
-              <span></span>
-            </label>
-            <input type="checkbox" id="digits" checked>
-          </div>
+        <div class="setting">
+          <label for="SpeicalChars">
+            <span>inlcude speical charaters</span>
+            <span></span>
+          </label>
+          <input type="checkbox" id="SpeicalChars" />
+        </div>
 
-          
-          <div class="setting">
-            <label for="SpeicalChars">
-              <span>inlcude speical charaters</span>
-              <span></span>
-            </label>
-            <input type="checkbox" id="SpeicalChars">
-          </div>
-          
-          <div class="setting">
-            <label for="letterMix">
-              <span>lower and upper case letters</span>
-              <span>note: lowercase letters will always be used</span>
-              <span></span>
-            </label>
-            <input type="checkbox" id="letterMix" checked>
-          </div>
-  
-        </section>
-        
-        <!-- character length -->
-        <section class="charater-length">
-          <p>Your password will be span <span id="charLengthSpan">15</span> characters long</p>
-          <p>move the slider to adjust length of your password</p>
-          <input type="range" name="" id="characterLengthSlider" min="10" max="50" value="15">
-        </section>
+        <div class="setting">
+          <label for="letterMix">
+            <span>lower and upper case letters</span>
+            <span>note: lowercase letters will always be used</span>
+            <span></span>
+          </label>
+          <input type="checkbox" id="letterMix" checked />
+        </div>
+      </section>
 
-        <!-- generated password -->
-        <section>
-          <section class="generated-password">
-            <input type="text" id="generatedPassword" spellcheck="false">
-            <button class="copypassword" id="copyPassword">copy</button>
-            <div class="confirmation" id="confirmation">
-              <p>password copied</p>
-            </div>
-          </section>
+      <!-- character length -->
+      <section class="character-length">
+        <p>
+          Your password will be span
+          <span id="charLengthSpan">15</span> characters long
+        </p>
+        <p>move the slider to adjust length of your password</p>
+        <input
+          type="range"
+          name=""
+          id="characterLengthSlider"
+          min="10"
+          max="50"
+          value="15"
+        />
+      </section>
+
+      <!-- generated password -->
+      <section>
+        <section class="generated-password">
+          <input type="text" id="generatedPassword" spellcheck="false" />
+          <button class="copypassword" id="copyPassword">copy</button>
+          <div class="confirmation" id="confirmation">
+            <p>password copied</p>
+          </div>
         </section>
+      </section>
     </div>
     <script src="./scripts/app.js"></script>
-</body>
+  </body>
 </html>
