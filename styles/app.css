@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #7785fe;
+  color: #616b74;
+  padding: 3rem 0.5rem 0.5rem;
+}
+
+.container {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem 1rem 1rem 1.5rem;
+  position: relative;
+}
+
+.lock-logo-div {
+  position: absolute;
+  top: -25px;
+  left: 1rem;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border: 6px solid #7785fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.lock-logo-div img {
+  width: 0.9rem;
+}
+
+section.settings-container .setting {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem auto;
+}
+section.settings-container .setting label {
+  width: 80%;
+  padding-right: 1rem;
+}
+section.settings-container .setting label span {
+  display: block;
+}
+section.settings-container .setting label span:first-of-type {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+section.settings-container .setting label span:last-of-type {
+  font-weight: 400;
+  color: #667583;
+  font-size: 0.1rem;
+  margin-top: 0.15rem;
+}
+section.settings-container .setting input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  width: 50px;
+  min-width: 50px;
+  background-color: #CCCFD3;
+  height: 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+section.settings-container .setting input[type=checkbox]::after {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 21px;
+  height: 21px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 30%;
+  transition: all 0.3s ease;
+}
+section.settings-container .setting input[type=checkbox]:checked {
+  background-color: #7785fe;
+}
+section.settings-container .setting input[type=checkbox]:checked::after {
+  left: 70%;
+}
+
+section.character-length {
+  margin: 3rem auto 2rem;
+  text-align: center;
+}
+section.character-length p:first-of-type {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+section.character-length p:first-of-type span {
+  color: #7785fe;
+  font-size: 1rem;
+}
+section.character-length p:last-of-type {
+  margin: 0.5rem auto 1rem;
+  font-size: 0.6rem;
+  color: #8E9BA7;
+}
+section.character-length input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 2rem;
+}
+section.character-length input[type=range]::-webkit-slider-runnable-track {
+  background-color: #CCCFD3;
+  height: 0.15rem;
+}
+section.character-length input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -7px;
+  height: 1rem;
+  background-color: #7785fe;
+  width: 1rem;
+  border-radius: 50%;
+}
+section.character-length input[type=range]:focus::-webkit-slider-thumb {
+  border: 1px solid #eee;
+  outline: 3px solid #eee;
+  outline-offset: 0.125rem;
+}
+
+section.generated-password {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+section.generated-password input, section.generated-password button {
+  font-weight: 800;
+  height: 3rem;
+}
+section.generated-password input {
+  width: 100%;
+  border-radius: 0.5rem 0 0 0.5rem;
+  border: 1px solid #CCCFD3;
+  border-right: none;
+  background-color: #F5F5F5;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  font-size: 1rem;
+  color: #465059;
+  outline: none;
+}
+section.generated-password button {
+  height: 3rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #CCCFD3;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: transparent;
+  cursor: pointer;
+  color: #465059;
+  transform: background-color 0.3s ease;
+}
+section.generated-password button:hover {
+  background-color: #CCCFD3;
+}
+section.generated-password .confirmation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 101%;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 550;
+  pointer-events: none;
+  opacity: 0;
+  transform: all 0.1s ease;
+}
+section.generated-password .confirmation p {
+  transform: scale(0.2);
+  transition: transform 0.2s ease;
+}
+section.generated-password .confirmation.active {
+  pointer-events: all;
+  opacity: 1;
+}
+section.generated-password .confirmation.active p {
+  transform: scale(1.1);
+}/*# sourceMappingURL=app.css.map */
