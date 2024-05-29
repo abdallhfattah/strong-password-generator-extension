@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
 
+// commanly used vars
 $primary: #7785fe;
 $white:#fff;
 $text-dark:#616b74;
@@ -123,6 +124,36 @@ section.character-length {
         font-size: .9rem;
         span {
             color:$primary;
+            font-size: 1rem;            
+        }
+        p:last-of-type{
+            margin: .5rem auto 1rem;
+            font-size: .6rem;
+            color:$text-light;
+        }
+        input[type='range']{
+            -webkit-appearance: none;
+            appearance: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius:2rem;
+            &::-webkit-slider-runnable-track{
+                background-color: $light-gray;
+                height: .15rem;
+            }
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                margin-top: -.7rem;
+                height: 1rem;
+                border-radius: 50%;
+            }
+            // focus once draged
+            &:focus::-webkit-slider-thumb{
+                border: 1px solid #eee;
+                outline: 3px solid #eee;
+                outline-offset: 0.125rem;
+            }   
         }
     }
 }
