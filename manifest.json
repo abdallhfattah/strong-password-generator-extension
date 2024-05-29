@@ -1,0 +1,15 @@
+{
+  "name": "Strong password",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "A strong password Generator",
+  "icon": {
+    "96": "assets/icon96.png",
+    "88": "assets/icon88.png",
+    "64": "assets/icon64.png"
+  },
+  "action": {
+    "default_icon": "assets/icon96.png",
+    "default_popup": "popup.html"
+  }
+}
