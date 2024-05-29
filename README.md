@@ -42,7 +42,7 @@ Follow these steps to use the Random Password Generator as a browser extension:
    Clone or download the repository to your local machine using Git or by downloading the ZIP file.
 
 ```bash
-git clone https://github.com/your-username/random-password-generator.git
+git clone https://github.com/abdallhfattah/random-password-generator.git
 ```
 
 2. **Load the Extension in Browser:**
