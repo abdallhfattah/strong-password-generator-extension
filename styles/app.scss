@@ -19,11 +19,10 @@ $logo-size:50px;
 }
 
 body {
-    font-family:'Gotham Rounded', monospace;
+    // font-family: monospace;
     font-size: 16px;
     font-weight: 400;
     background-color: $primary;
-
     color: $text-dark;
     padding: 3rem .5rem .5rem;
 }
@@ -54,36 +53,33 @@ body {
 
 }
 
-section.setting-container  {
+section.settings-container  {
     .setting {
         display: flex;
         align-items: center;
         margin: 1.5rem auto;
         label {
             width: 80%;
-            padding-right:1rem;
-            span {
+            padding-right: 1rem;
+            span {  
                 display: block;
-
-                // first <type>
-                &:first-of-type{
-                    font-weight: 500;
+                &:first-of-type {   
+                    font-weight: 800;
                     font-size: .9rem;
                 }
-                // notes
                 &:last-of-type {
-                    font-weight: 300;
+                    font-weight: 400;
                     color:darken($text-light, 15%);
-                    font-size:.7rem;
+                    font-size: .1rem;
                     margin-top: .15rem;
                 }
             }
         }
-    
-        input[type='checkbox']{
+
+        input[type='checkbox'] {
 
             appearance: none;
-            -webkit-appearance: none;
+            // -webkit-appearance: none;
             position: relative;
             width: 50px;
             min-width: 50px;
@@ -126,34 +122,105 @@ section.character-length {
             color:$primary;
             font-size: 1rem;            
         }
-        p:last-of-type{
-            margin: .5rem auto 1rem;
-            font-size: .6rem;
-            color:$text-light;
+    }
+
+    p:last-of-type {
+        margin: .5rem auto 1rem;
+        font-size: .6rem;
+        color:$text-light;
+    }
+
+    input[type='range'] {
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius:2rem;
+        // background-color: $primary;
+        &::-webkit-slider-runnable-track {
+            background-color: $light-gray;
+            height: 0.15rem;
         }
-        input[type='range']{
+        &::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            cursor: pointer;
-            width: 100%;
-            border-radius:2rem;
-            &::-webkit-slider-runnable-track{
-                background-color: $light-gray;
-                height: .15rem;
+            margin-top: -7px;
+            height: 1rem;
+            background-color: $primary;
+            width: 1rem;
+            border-radius: 50%;
+        }
+        // focus once draged
+        &:focus::-webkit-slider-thumb {
+            border: 1px solid #eee;
+            outline: 3px solid #eee;
+            outline-offset: 0.125rem;
+        }
+    }
+}
+
+section.generated-password {
+    position: relative;
+    display: flex;
+    align-items: center;
+    input, button {
+        // font-family: 'Gotham Rounded' monospace;
+        font-weight: 500;
+        height: 3rem;
+    }
+    input {
+        width: 100%;
+        border-radius: .5rem 0 0 .5rem;
+        border: 1px solid $light-gray;
+        border-right: none;
+        background-color: $lighter-gray;
+        padding: .5rem .5rem .5rem 1rem;
+        font-size: 1rem;
+        color: $text-darker;
+        outline: none;
+    }
+    button {
+        height: 3rem;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $light-gray;
+        border-radius: 0 .5rem .5rem 0;
+        background-color: transparent;
+        cursor: pointer;
+        color: $text-darker;
+        transform: background-color .3s ease;
+
+        &:hover{
+            background-color: $light-gray;
+        }
+    }
+    .confirmation {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        height: 101%; // idk want to hide the password line color
+        width: 100%;
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 550;
+        pointer-events: none; // removes cl icking hovering draging , etc
+        opacity: 0;
+        transform: all .1s ease;
+        p {
+            transform: scale(0.2);
+            transition: transform  .2s ease;
+        }
+        &.active {
+            pointer-events: all;
+            opacity: 1;
+            p {
+                transform: scale(1.1);
             }
-            &::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                appearance: none;
-                margin-top: -.7rem;
-                height: 1rem;
-                border-radius: 50%;
-            }
-            // focus once draged
-            &:focus::-webkit-slider-thumb{
-                border: 1px solid #eee;
-                outline: 3px solid #eee;
-                outline-offset: 0.125rem;
-            }   
         }
     }
 }
