@@ -13,7 +13,7 @@
       </div>
 
       <!-- setting container -->
-      <section class="setting-container">
+      <section class="settings-container">
         <div class="setting">
           <label for="IncludeDigits">
             <span>Include digits</span>
@@ -33,8 +33,7 @@
         <div class="setting">
           <label for="letterMix">
             <span>lower and upper case letters</span>
-            <span>note: lowercase letters will always be used</span>
-            <span></span>
+            <span>note lowercase letters will always be used</span>
           </label>
           <input type="checkbox" id="letterMix" checked />
         </div>
@@ -42,14 +41,10 @@
 
       <!-- character length -->
       <section class="character-length">
-        <p>
-          Your password will be span
-          <span id="charLengthSpan">15</span> characters long
-        </p>
+        <p>Your password will be span <span id="charLengthSpan">15</span> characters long</p>
         <p>move the slider to adjust length of your password</p>
         <input
           type="range"
-          name=""
           id="characterLengthSlider"
           min="10"
           max="50"
@@ -60,14 +55,12 @@
       <!-- generated password -->
       <section>
         <section class="generated-password">
-          <input type="text" id="generatedPassword" spellcheck="false" />
-          <button class="copypassword" id="copyPassword">copy</button>
-          <div class="confirmation" id="confirmation">
-            <p>password copied</p>
-          </div>
+          <input type="text" id="generatedPassword" spellcheck="false">
+          <button class="copy-password" id="copyPassword">copy</button>
+          <div class="confirmation" id="confirmation"> <p>password copied!</p></div>
         </section>
       </section>
     </div>
-    <script src="./scripts/app.js"></script>
+    <!-- <script src="./scripts/app.js"></script> -->
   </body>
 </html>
