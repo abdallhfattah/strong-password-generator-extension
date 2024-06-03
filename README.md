@@ -58,7 +58,7 @@ git clone https://github.com/abdallhfattah/random-password-generator.git
   3. Select the `manifest.json` file from the directory where you cloned or downloaded the repository.
 
 - **For Brave or Other Chromium-based Browsers:**
-  1. Open Brave or the respective browser and navigate to `chrome://extensions/`.
+  1. Open Brave or the respective browser and navigate to `brave://extensions/`.
   2. Enable "Developer mode" by toggling the switch in the top-right corner.
   3. Click on the "Load unpacked" button.
   4. Select the directory where you cloned or downloaded the repository.
